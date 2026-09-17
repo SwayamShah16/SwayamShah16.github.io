@@ -25,9 +25,35 @@ centeringStyles.textContent = `
     text-align: center;
   }
 
+  /* Keep the about-section icons in their own space so the animation cannot
+     move them into the heading below. */
+  .about-icon {
+    animation: none;
+    min-height: 3.5rem;
+    align-items: center;
+  }
+
+  /* Center the final card when the three-column grid has an incomplete row. */
+  .about-grid > .about-card:last-child {
+    grid-column: 2;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid > .about-card:last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: min(100%, 500px);
+    }
+  }
+
   @media (max-width: 768px) {
     .hero-content {
       justify-items: center;
+    }
+
+    .about-grid > .about-card:last-child {
+      grid-column: auto;
+      width: 100%;
     }
   }
 `;
