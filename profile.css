@@ -482,6 +482,101 @@ body {
     box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
 }
 
+/* Learning Section */
+.learning {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(123, 104, 238, 0.06), rgba(0, 212, 255, 0.05));
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.learning-card {
+    background: rgba(15, 23, 36, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.learning-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--gradient);
+}
+
+.learning-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+}
+
+.learning-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    border-radius: 14px;
+    background: rgba(0, 212, 255, 0.12);
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.learning-badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(255, 210, 63, 0.12);
+    color: var(--secondary-color);
+    border: 1px solid rgba(255, 210, 63, 0.35);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.learning-card h3 {
+    color: var(--text-primary);
+    font-size: 1.35rem;
+    margin-bottom: 0.85rem;
+}
+
+.learning-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.learning-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--text-primary);
+}
+
+.learning-list li {
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.learning-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
 /* Projects Section */
 .projects {
     padding: 80px 20px;
@@ -872,7 +967,7 @@ body {
         padding: 60px 15px 30px;
     }
 
-    .about, .skills, .projects, .stats, .interests, .cta {
+    .about, .skills, .learning, .projects, .stats, .interests, .cta {
         padding: 50px 15px;
     }
 
